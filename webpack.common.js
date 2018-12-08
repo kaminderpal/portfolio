@@ -6,6 +6,7 @@ const webpack = require('webpack');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const about  = fs.readFileSync(__dirname + "/src/templates/about.html");
 const sidebar = fs.readFileSync(__dirname+ "/src/templates/sidebar.html");
@@ -42,13 +43,6 @@ module.exports={
                     use  : [ MiniCssExtractPlugin.loader,"css-loader" ]
                },
                {
-                    test : /\.(png|svg|jpg|gif)$/,
-                    use  : ["file-loader"]
-               },{
-                    test : /\.(woff|woff2|eot|ttf|otf)$/,
-                    use  : ['file-loader']
-               },
-               {
                     test: /\.js$/,
                     exclude: /(node_modules)/,
                     use: {
@@ -58,32 +52,55 @@ module.exports={
                       }
                     }
                },{
-                    test : /\.html$/,
+                    test : /\.html$/i,
                     use :{
-                         loader :'file-loader',
-                         options : '[name].[ext]'
+                         loader :'html-loader',
+                         options : {
+                              name : '[name].[ext]',
+                              attrs: ['img:src']
+                          }
                     },
                     exclude : path.resolve(__dirname,'index.html')
-               }
+               },
+               {
+                    test : /\.(png|svg|jpg|gif)$/i,
+                    use  : {
+                         loader : 'file-loader',
+                         options : {
+                              name : '[name].[ext]',
+                              emitFile: true,
+                              outputPath: 'img/',
+                              publicPath : 'img/'
+                              
+                         }
+                    }
+               },{
+                    test : /\.(woff|woff2|eot|ttf|otf)$/,
+                    use  : ['file-loader']
+               },
           ]
      },
      plugins :[
           new cleanWebpackPlugin(['dist']),
+          new MiniCssExtractPlugin({
+               filename: "[name].css",
+               chunkFilename: "[name].css"
+          }),
           new htmlWebpackPlugin({
                template : 'index.html',
-               inject : true,
                about : about,
                experience : experience,
                education : education,
                skills :skills,
                interest : interest,
                contact : contact,
-               sidebar : sidebar
+               sidebar : sidebar,
+               inject : true
           }),
-          new MiniCssExtractPlugin({
-               filename: "[name].css",
-               chunkFilename: "[name].css"
-          })
-
+          new CopyWebpackPlugin([{
+               from: './src/img', 
+               to: './img',
+               toType : 'dir'
+          }])
      ]
 }

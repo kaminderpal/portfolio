@@ -1,0 +1,65 @@
+body {
+    font-family: Muli,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+    padding-top: 54px;
+    color: #868e96;
+}
+.bg-primary{
+     background-color: #bd5d38!important;
+}
+@media (min-width:992px){
+     .ks-sidebar .navbar-brand{
+          display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto auto 0;
+    padding: .5rem;
+     }
+     .ks-sidebar .navbar-brand .img-profile{
+          max-width: 10rem;
+    max-height: 10rem;
+    border: .5rem solid rgba(255,255,255,.2);
+     }
+     .ks-sidebar{
+          text-align: center;
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          width: 17rem;
+          height: 100vh;
+     }
+     .ks-sidebar .navbar-collapse{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+          flex-grow: 0;
+          width: 100%;
+          margin-bottom: auto;
+     }
+     .ks-sidebar .navbar-collapse .navbar-nav{
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          width: 100%;
+     }
+     .ks-sidebar .navbar-collapse .navbar-nav .nav-item .nav-link{
+          display: block;
+     }
+}
+.ks-sidebar .navbar-nav .nav-item .nav-link{
+     font-weight: 800;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+}
