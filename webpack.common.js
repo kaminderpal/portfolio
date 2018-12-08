@@ -53,13 +53,7 @@ module.exports={
      plugins :[
           new cleanWebpackPlugin(['dist']),
           new htmlWebpackPlugin({
-               title : "Kaminderpal Singh",
-               meta :{
-                    author : "Kaminderpal Singh",
-                    description : "Web developer, Portfolio",
-                    favicon : "",
-                    viewport : "width=device-width, initial-scale=1.0"
-               }
+               template : 'index.html'
           }),
           new MiniCssExtractPlugin({
                filename: "[name].css",
