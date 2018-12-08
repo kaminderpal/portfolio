@@ -6,18 +6,21 @@ body {
 .bg-primary{
      background-color: #bd5d38!important;
 }
+.social-icons a:hover {
+     background-color: #bd5d38;
+ }
 @media (min-width:992px){
      .ks-sidebar .navbar-brand{
           display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: auto auto 0;
-    padding: .5rem;
+          display: -ms-flexbox;
+          display: flex;
+          margin: auto auto 0;
+          padding: .5rem;
      }
      .ks-sidebar .navbar-brand .img-profile{
           max-width: 10rem;
-    max-height: 10rem;
-    border: .5rem solid rgba(255,255,255,.2);
+          max-height: 10rem;
+          border: .5rem solid rgba(255,255,255,.2);
      }
      .ks-sidebar{
           text-align: center;
@@ -57,9 +60,70 @@ body {
      .ks-sidebar .navbar-collapse .navbar-nav .nav-item .nav-link{
           display: block;
      }
+     section.resume-section{
+          padding-top: 3rem!important;
+           padding-bottom: 3rem!important;
+     }
+     body {
+          padding-top: 0;
+          padding-left: 17rem;
+      }
+      section.resume-section {
+          min-height: 100vh;
+      }
+      h1 {
+          font-size: 6rem;
+          line-height: 5.5rem;
+      }   
+      section.resume-section {
+          padding-top: 5rem!important;
+          padding-bottom: 5rem!important;
+          max-width: 75rem;
+      }
 }
+@media (max-width:992px){
+     h1{
+          font-size: 3rem !important;
+     }
+}
+
 .ks-sidebar .navbar-nav .nav-item .nav-link{
      font-weight: 800;
     letter-spacing: .05rem;
     text-transform: uppercase;
 }
+
+ h1, h2, h3, h4, h5, h6 {
+     font-family: 'Saira Extra Condensed',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+     font-weight: 700;
+     text-transform: uppercase;
+     color: #343a40;
+ }
+ .text-primary {
+     color: #bd5d38!important;
+ }
+ .subheading {
+     text-transform: uppercase;
+     font-weight: 500;
+     font-family: 'Saira Extra Condensed',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+     font-size: 1.5rem;
+ }
+ a{
+     color: #bd5d38;
+ }
+ p.lead {
+     font-size: 1.15rem;
+     font-weight: 400;
+ }
+ .social-icons a {
+     display: inline-block;
+     height: 3.5rem;
+     width: 3.5rem;
+     background-color: #495057;
+     color: #fff!important;
+     border-radius: 100%;
+     text-align: center;
+     font-size: 1.5rem;
+     line-height: 3.5rem;
+     margin-right: 1rem;
+ }

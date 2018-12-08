@@ -11,11 +11,11 @@
      <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
 </head>
 <body>
-     <div class="sidebar">
-          <%= htmlWebpackPlugin.options.sidebar %>
-     </div>
-     <div class="main">
+
+     <%= htmlWebpackPlugin.options.sidebar %>
+     <div class="container-fluid p-0">
           <%= htmlWebpackPlugin.options.about %>
+          <hr class="m-0">
           <%= htmlWebpackPlugin.options.experience %>
           <%= htmlWebpackPlugin.options.skills %>
           <%= htmlWebpackPlugin.options.education %>
