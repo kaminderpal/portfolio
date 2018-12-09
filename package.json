@@ -8,7 +8,7 @@
     "prod": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "predeploy": "npm run prod",
-    "deploy": "gh-pages -d prod"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
