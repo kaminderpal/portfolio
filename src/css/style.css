@@ -3,6 +3,9 @@ body {
     padding-top: 54px;
     color: #868e96;
 }
+.ks-skills ul>li{
+  margin: 0 .25rem;
+}
 .bg-primary{
      background-color: #bd5d38!important;
 }
