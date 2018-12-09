@@ -9,6 +9,9 @@ body {
 .bg-primary{
      background-color: #bd5d38!important;
 }
+.ks-skills svg{
+  color: #bd5d38;
+}
 .social-icons a:hover {
      background-color: #bd5d38;
  }
