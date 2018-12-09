@@ -192,10 +192,10 @@ body {
   a:hover, a:focus, a:active {
     color: #824027;
   }
-  section ul {
+  .ks-experience  ul {
       list-style: none;
   }
-  section ul >li::before{
+  .ks-experience ul >li::before{
     content: "\2022";
     color: #824027;
     font-weight: bold;
